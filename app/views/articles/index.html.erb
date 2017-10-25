@@ -1,21 +1,49 @@
-<h1>Listing Articles</h1>
-<%= link_to 'New article', new_article_path, class: "button is-primary" %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
+<style>
+  .tabs{
+    position:fixed;
+    background: #00d1b2;
+    width: 100%
+  }
+</style>
 
-  <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article_path(article),
-                        method: :delete,
-                        data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
-</table>
+
+<section class="hero is-primary">
+  <div class ="tabs is-boxed">
+    <ul>
+      <li>
+        <a href="/welcome/index">
+          <span class="icon is-small"><i class="fa fa-home" aria-hidden="true"></i></span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a href="/articles">
+          <span class="icon is-small"><i class="fa fa-music"></i></span>
+          <span>Blog</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<br>
+<br>
+<br>
+
+<label class="checkbox">
+  <input type="checkbox">
+  Remember me
+</label>
+
+  <%= link_to 'New homework', new_article_path, class: "button is-primary" %>
+  <br>
+<br>
+
+<% @articles.each do |article| %>
+  <div class="columns">
+    <div class="column is-half">
+      <%= render partial: "box", locals: { article: article } %>
+    </div>
+  </div>
+<% end %>

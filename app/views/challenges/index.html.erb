@@ -1,0 +1,40 @@
+<div class="pages index">
+  <h2>Days</h2>
+
+  <table class="Listing" summary ="Page list">
+    <tr class="header">
+
+      <th>#</th>
+      <th>Description</th>
+    </tr>
+    <% @challenges.each do |challenge| %>
+        <tr>
+          <td><%= challenge.fasted %></td>
+          <td><%= challenge.description %></td>
+        </tr>
+    <% end %>
+
+    <div class="container">
+      <input type="checkbox" class="checks" value= 1 > Save me!<br>
+
+      <script>
+        const checkboxes = document.querySelectorAll('input[type=checkbox]');
+
+        function saveCheckbox(event) {
+          const checkbox = event.target;
+
+          $.get(`/challenges/save_checkbox?value=${checkbox.value}&checke=${checkbox.checked}`);
+        }
+
+        checkboxes.forEach(function(checkbox) {
+          checkbox.addEventListener('change', saveCheckbox);
+        })
+
+      </script>
+    </div>
+
+
+
+
+  </table>
+</div>
