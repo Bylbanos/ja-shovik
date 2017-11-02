@@ -1,32 +1,16 @@
-<style>
-  .tabs{
-    position:fixed;
-    background: #00d1b2;
-    width: 100%
-  }
-</style>
-
-
-<section class="hero is-primary">
-  <div class ="tabs is-boxed">
-    <ul>
-      <li>
-        <a href="/welcome/index">
-          <span class="icon is-small"><i class="fa fa-home" aria-hidden="true"></i></span>
-          <span>Home</span>
-        </a>
-      </li>
-      <li class="is-active">
-        <a href="/articles">
-          <span class="icon is-small"><i class="fa fa-music"></i></span>
-          <span>Blog</span>
-        </a>
-      </li>
-    </ul>
+<section class="hero is-light">
+  <div class="columns ">
+    <div class="column is-offset-3 is-2 has-text-centered ">
+      <%= link_to "Blog", articles_path, class: "button is-active is-light is-medium is-fullwidth" %>
+    </div>
+    <div class="column  is-2 has-text-centered">
+      <%= link_to "Home", welcome_index_path, class: "button is-light is-medium is-fullwidth" %>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <a class="button is-light is-medium is-fullwidth"><s>Videos</s></a>
+    </div>
   </div>
 </section>
-
-
 <br>
 <br>
 <br>
@@ -36,7 +20,7 @@
   Remember me
 </label>
 
-  <%= link_to 'New homework', new_article_path, class: "button is-primary" %>
+  <%= link_to 'New homework', new_article_path, class: "button is-primary is-large" %>
   <br>
 <br>
 

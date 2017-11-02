@@ -1,10 +1,10 @@
 <section class="hero is-light">
   <div class="columns ">
     <div class="column is-offset-3 is-2 has-text-centered ">
-      <a class="button is-light is-medium is-fullwidth "><s>Blog</s></a>
+      <%= link_to "Blog", articles_path, class: "button is-light is-medium is-fullwidth" %>
     </div>
     <div class="column  is-2 has-text-centered">
-      <a class="button is-active is-white is-medium is-fullwidth"  href="https://ja.shovik.com/" >Home</a>
+      <%= link_to "Home", welcome_index_path, class: "button is-active is-white is-medium is-fullwidth" %>
     </div>
     <div class="column is-2 has-text-centered">
       <a class="button is-light is-medium is-fullwidth"><s>Videos</s></a>
