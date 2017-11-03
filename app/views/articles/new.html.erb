@@ -1,5 +1,17 @@
-<h1>New article</h1>
+<section class="hero is-light">
+  <div class="columns ">
+    <div class="column is-offset-3 is-2 has-text-centered ">
+      <%= link_to "Blog", articles_path, class: "button is-light is-medium is-fullwidth" %>
+    </div>
+    <div class="column  is-2 has-text-centered">
+      <%= link_to "Home", welcome_index_path, class: "button is-light is-medium is-fullwidth" %>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <a class="button is-light is-medium is-fullwidth"><s>Videos</s></a>
+    </div>
+  </div>
+</section>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', articles_path %>
+
