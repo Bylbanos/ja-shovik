@@ -10,7 +10,7 @@
         <p>
           <strong><%= article.title %></strong>
           <br>
-          <%= article.text %>
+          <%= article.text.html_safe %>
         </p>
       </div>
       <nav class="level is-mobile">

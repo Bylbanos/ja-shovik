@@ -25,16 +25,13 @@
           </div>
           <div class="field">
             <%= f.label :text, class:"label" %>
-            <div class="control">
-              <%= f.text_area :text, class: "textarea", rows: "22" %>
+            <div>
+              <%= f.trix_editor :text, class: "trix_editor", rows: "22" %>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
-
 
 
 
@@ -55,3 +52,5 @@
 
 
 <% end %>
+
+

@@ -7,7 +7,7 @@ ENV PATH /root/.yarn/bin:$PATH
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
 
-RUN apt-get update -qq && apt-get install -y build-essential
+RUN apt-get update && apt-get install -y build-essential
 RUN apt-get install -y --no-install-recommends   git \
     make \
     g++ \
@@ -22,8 +22,8 @@ RUN apt-get install -y --no-install-recommends   git \
     procps \
     zlib1g-dev \
     openssh-server \
-    libsqlite3-dev \
-    curl
+    curl \
+    libpq-dev
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -   && apt-get install -y nodejs
 RUN /bin/bash   && touch ~/.bashrc   && curl -o- -L https://yarnpkg.com/install.sh | bash

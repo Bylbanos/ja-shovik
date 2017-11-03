@@ -21,7 +21,7 @@
           <%= @article.title %>
          </p>
           <div class="content">
-          <%= @article.text %>
+          <%= @article.text.html_safe%>
          </div>
 
       </div>
