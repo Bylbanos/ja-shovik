@@ -10,7 +10,7 @@
         <p>
           <strong><%= article.title %></strong>
           <br>
-          <%= article.text.html_safe %>
+          <%= sanitize(article.text, tags: %w(b strong em i)).html_safe %>
         </p>
       </div>
       <nav class="level is-mobile">

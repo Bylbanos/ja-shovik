@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photos
   get 'challenges/index'
   get 'challenges/save_checkbox'
 

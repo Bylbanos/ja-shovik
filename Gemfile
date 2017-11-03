@@ -13,6 +13,7 @@ gem 'rails', '~> 5.1.3'
 
 gem 'pg'
 gem 'trix'
+gem 'shrine'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
