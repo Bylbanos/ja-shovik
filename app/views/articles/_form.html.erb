@@ -18,15 +18,11 @@
       <%= f.label :title %>
       <%= f.text_area :title, id: :post_title, class: "form-control" %>
     </div>
-
-
-
     <div class="field">
       <%= f.label :text %>
-      <%= f.text_area :text, id: :post_text, class: "form-control" %>
+      <%= f.hidden_field :text, id: :post_text, class: "form-control" %>
       <trix-editor input="post_text"></trix-editor>
     </div>
-
     <div class="actions">
       <%= f.submit %>
     </div>
