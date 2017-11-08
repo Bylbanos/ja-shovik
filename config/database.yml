@@ -14,7 +14,7 @@ development:
   <<: *default
 #  database: db/development.sqlite3
   adapter: postgresql
-  database: blog
+  database: blog<%= ENV["DB_SUFFIX"] %>
   host: localhost
 
 

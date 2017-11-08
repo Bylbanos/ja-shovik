@@ -10,6 +10,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "db:reset": "bin/rails db:schema:load"
   }
 }
