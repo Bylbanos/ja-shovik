@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<section class="hero is-light">
-  <div class="hero-head">
-    <div class="columns ">
-      <div class="column is-offset-3 is-2 has-text-centered ">
-        <s><%= link_to "Blog", root_path, class: "button is-light is-medium is-fullwidth" %></s>
-      </div>
-      <div class="column  is-2 has-text-centered">
-        <%= link_to "Home", root_path, class: "button is-active is-white is-medium is-fullwidth" %>
+<style>
+.picture {
+  background-image: url("/images/forest.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  text-shadow: 0.5px 0.5px white;
+
+}
+</style>
+
+<div class="picture">
+
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-offset-3 is-2 has-text-centered">
+        <s><%= link_to "Blog", root_path, class: "button is-dark is-medium is-fullwidth is-outlined" %></s>
       </div>
       <div class="column is-2 has-text-centered">
-        <a class="button is-light is-medium is-fullwidth"><s>Videos</s></a>
+        <%= link_to "Home", root_path, class: "button is-active is-dark is-medium is-fullwidth is-outlined" %>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <a class="button is-dark is-medium is-fullwidth is-outlined"><s>Videos</s></a>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 
-<section class="hero-body">
+<div class="hero is-transparent">
+<div class="hero-body">
   <div class="columns">
     <div class="column is-offset-2 is-8 has-text-centered">
           <p>
@@ -32,7 +45,9 @@
           </p>
     </div>
   </div>
-</section>
+</div>
+</div>
+
 
 <section class="hero is-light">
   <div class="hero-body">
@@ -61,6 +76,10 @@
     </div>
   </div>
 </section>
+
+</div>
+
+
 
 <section class="hero is-light">
   <div class="hero-body">
