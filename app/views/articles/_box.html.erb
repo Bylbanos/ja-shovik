@@ -1,16 +1,13 @@
 <div>
   <article class="media">
-    <!--<div class="media-left">-->
-      <!--<figure class="image is-64x64">-->
-        <!--<img src="/images/round_profile_face.png" height="128px" width="128px">-->
-      <!--</figure>-->
-    <!--</div>-->
     <div class="media-content">
       <div class="content">
         <p>
-          <strong><%= article.title %></strong>
+          <%= link_to article_path(article) do %>
+              <strong><%= article.title %></strong>
+          <% end %>
           <br>
-          <%= sanitize(article.text, tags: %w(b strong em i)) %>
+          <%= truncate(sanitize(article.text, tags: %w(b strong em i)), length: 800) { link_to " Continue reading", "article_path(article)" } %>
         </p>
       </div>
       <nav class="level is-mobile">
