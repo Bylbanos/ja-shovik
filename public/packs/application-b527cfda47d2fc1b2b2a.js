@@ -68,7 +68,7 @@
 /*!***********************************************!*\
   !*** ./app/javascript/packs/application.sass ***!
   \***********************************************/
-/*! dynamic exports provided */
+/*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports) {
 
